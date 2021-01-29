@@ -1,0 +1,24 @@
+
+{{#if user}}
+<h2>Create a post</h2>
+
+
+<form action="/create-post" method="POST" enctype="multipart/form-data">
+    <label for="content">About your post: </label>
+    <input type="text" id="content" name="content" placeholder="About your post ..." />
+
+    <label for="pic-name">A catchy title: </label>
+    <input type="text" id="pic-name" name="picName" placeholder="Title for you picture" />
+
+  
+  <label for="post-picture">Upload a picture!</label>
+  <input id="post-picture" type="file" name="postPicture" accept="image/png, image/jpeg">
+
+
+    <button type="submit">Create a post.</button>
+
+    {{else}}
+    <h2>Please log in to create a post! </h2>
+    {{/if}}
+
+  

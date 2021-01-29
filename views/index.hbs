@@ -1,2 +1,15 @@
 <h1>{{title}}</h1>
 <p>Welcome Ironhacker!</p>
+{{#if user}}
+<button><a href="/create-post">Create a post</a></button>
+{{/if}}
+
+<br>
+<h2>POSTS BY ALL USERS</h2>
+{{#each posts}}
+<div>
+<h4>{{this.picName}}</h4>
+<p>{{this.content}}</p>
+<img src="{{this.picPath}}" alt="{{this.picName}}" width="300">
+</div>
+{{/each}}
